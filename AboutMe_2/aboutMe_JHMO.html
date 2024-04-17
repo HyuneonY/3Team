@@ -20,16 +20,25 @@
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
         * {
-            font-family: 'Gowun Dodum', sans-serif;
+            color: black;
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
         }
 
         .aboutMeTitle {
             color: black;
-            height: 300px;
+            height: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 10vh;
+            width: 100vw;
+            background-image: url('../img/guestbookpic.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
         }
 
         .aboutMeDetail {
@@ -49,12 +58,29 @@
         .hyperLink {
             height: 35px;
         }
+
+        h1 {
+            font-size: 72px;
+        }
+
+        .card-text1 {
+            background-color: rgb(214, 214, 214);
+        }
+
+        .card {
+            font-size: 18px;
+        }
+        strong {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="aboutMeTitle">
-        <h1>3조 모 전 하</h1>
+        <h1>3조 모전하</h1>
     </div>
 
     <div class="aboutMeDetail">
@@ -65,15 +91,15 @@
                     <img src="aboutMe_JHMO.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="aboutMeDetailTitle">지금부터 이 사람에 대해 알아보자!</h2>
-                        <p class="card-text"><strong>한줄 자기소개</strong> 비전공 개발초보 모전하입니다. 반갑습니다👋</p>
+                        <p class="card-text1"><strong>한줄 자기소개</strong> 비전공 개발초보 모전하입니다. 반갑습니다👋</p>
                         <p class="card-text"><strong>희망 직군</strong> node.js 개발자</p>
-                        <p class="card-text"><strong>MBIT</strong> <b class="mbti">INFP</b></p>
+                        <p class="card-text1"><strong>MBIT</strong> <b class="mbti">INFP</b></p>
                         <p class="card-text"><strong>나의 장점</strong> 남의 얘기를 잘 들어줘요👂</p>
-                        <p class="card-text"><strong>나의 협업 스타일</strong> 팀원 의견 따라가는 편</p>
+                        <p class="card-text1"><strong>나의 협업 스타일</strong> 팀원 의견 따라가는 편</p>
                         <p class="card-text"><strong>취미</strong> 음악감상, 그림그리기</p>
-                        <p class="card-text"><strong>좋아하는 것</strong> 우리집 😺</p>
+                        <p class="card-text1"><strong>좋아하는 것</strong> 우리집 😺</p>
                         <p class="card-text"><strong>싫어하는 것</strong> 습한 날씨</p>
-                        <p class="card-text"><strong>좋아하는 음악</strong> 비비 | 밤양갱 🌰
+                        <p class="card-text1"><strong>좋아하는 음악</strong> 비비 | 밤양갱 🌰
                             <a href="https://youtu.be/smdmEhkIRVc?si=WwDzQPuLoafpm_yB" target="_blank">
                                 <button type="button" class="btn btn-outline-danger">들으러 가기</button>
                         </p></a>
@@ -94,7 +120,7 @@
                         </div>
                         <a href="javascript:top.window.close()">
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">닫기</button>
+                                <button class="btn btn-secondary" type="button">닫기</button>
                             </div>
                     </div>
                 </div>
