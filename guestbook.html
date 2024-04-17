@@ -19,7 +19,7 @@
       margin: 30px 30px 30px 30px;
       width: 80%;
       height: 200px;
-      color: #585858;
+      color: black;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -52,13 +52,17 @@
     }
 
     .deletebtn {
-      width: 5%;
+      width: 60px;
     }
 
-    .dbtn {
-      text-align: right;
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
     }
 
+    .endBtn {
+      margin-left: 40%;
+    }
   </style>
   <script type="module">
     // Firebase SDK 라이브러리 가져오기
@@ -94,8 +98,6 @@
     // Firebase 인스턴스 초기화
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
-    $('#addList').toggle();
-    $('#deletebtn').toggle();
 
     const coll = collection(db, 'to_do');
     const snapshot = await getCountFromServer(coll);
@@ -104,34 +106,13 @@
       await setDoc(doc(db, 'to_do_card', 'last_card'), { last: 0 });
     }
 
-    $('#addList').toggle();
 
-    let a = 1;
-    $('#addDo').click(async function () {
-      $('#deletebtn').show();
-      a++;
-      if (a >= 10) {
-        alert('할 일은 9개가 최대입니다.');
-      } else {
-        let temp_html = `<div id=${a * 10} class="form-floating mb-3">
-                <input type="email" class="form-control" id=${a} placeholder="${a}번째 할 일">
-                <label for="floatingInput">${a}번째 할 일</label>
-            </div>`;
-        $('#input').append(temp_html);
-      }
-    });
-    $('#deletebtn').click(async function () {
-      $('#' + a * 10).remove();
-      a--;
-      if (a == 1) {
-        $('#deletebtn').hide();
-      }
-    });
+
 
     // 카드 등록
     $('#postingbtn').click(async function () {
       let doingList = [];
-      for (let i = 0; i <= a; i++) {
+      for (let i = 0; i <= 2; i++) {
         doingList.push($('#' + i).val());
       }
       let docIn = {
@@ -166,23 +147,17 @@
       row = row.data();
       let date = row['doingList'][0];
       let temp_html = `
-      
-      <div class=${find}>
-                <div class="card h-100">
-                  
-                  <div class="card-footer">
-                    <small class="text-body-secondary">${date}</small>
-                    <div class="dbtn">
-                      <button class="deletebtn" id=${find} type="button" class="btn btn-danger">X</button>
-                      </div>
-                </div>
-                    <div class="card-body">`;
-      for (let i = 1; row['doingList'][i] != undefined; i++) {
-        temp_html += `<h5>${row['doingList'][i] + '\n'}</h5>`;
-      }
-      temp_html += `
-               </div>
-                    
+            <div class=${find}>
+              <div class="card h-100">
+                <div class="card-footer">
+                  <small class="text-body-secondary">${date}</small>
+                  <small class="dbtn">
+                    <button class="deletebtn" id=${find} type="button" class="btn btn-danger">X</button>
+                    </small>
+              </div>
+                  <div class="card-body">`;
+      temp_html += `<h5>${row['doingList'][1] + '\n'}</h5>
+                    </div>  
                 </div>
             </div>`;
       $('#card').append(temp_html);
@@ -190,18 +165,27 @@
 
     // 카드 삭제
     $('.deletebtn').click(async function (e) {
-      $('.' + e.target.id).remove();
-      await deleteDoc(doc(db, 'to_do', e.target.id));
-      const washingtonRef = doc(db, 'to_do_card', 'card_available');
-      await updateDoc(washingtonRef, {
-        cards: arrayRemove(e.target.id),
-      });
+      var pwIn = prompt('비밀번호를 입력하세요', '');
+      let pw = await getDoc(doc(db, 'to_do', e.target.id));
+      pw = pw.data();
+      if (pwIn == pw['doingList'][2]) {
+        alert("삭제되었습니다.");
+        $('.' + e.target.id).remove();
+        await deleteDoc(doc(db, 'to_do', e.target.id));
+        const washingtonRef = doc(db, 'to_do_card', 'card_available');
+        await updateDoc(washingtonRef, {
+          cards: arrayRemove(e.target.id),
+        });
 
-      const coll = collection(db, 'to_do');
-      const snapshot = await getCountFromServer(coll);
-      let card_count = snapshot.data().count;
-      if (card_count == 0) {
-        await setDoc(doc(db, 'to_do_card', 'last_card'), { last: 0 });
+        const coll = collection(db, 'to_do');
+        const snapshot = await getCountFromServer(coll);
+        let card_count = snapshot.data().count;
+        if (card_count == 0) {
+          await setDoc(doc(db, 'to_do_card', 'last_card'), { last: 0 });
+        }
+      }
+      else {
+        alert("비밀번호가 일치하지 않습니다.");
       }
     });
   </script>
@@ -221,7 +205,7 @@
       </div>
       <div class="password">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="2" placeholder="비밀번호" />
+          <input type="password" class="form-control" id="2" placeholder="비밀번호" />
           <label for="floatingInput">비밀번호</label>
         </div>
       </div>
@@ -232,7 +216,6 @@
         </div>
       </div>
     </div>
-    <button id="deletebtn" type="button" class="btn btn-danger">X</button>
     <div class="mybtn">
       <button id="postingbtn" type="button" class="btn btn-primary">
         기록하기
@@ -242,6 +225,12 @@
   <div class="mycards">
     <div id="card" class="row row-cols-1 row-cols-md-1 g-4"></div>
   </div>
+  </div>
+  <a href="javascript:top.window.close()">
+    <div class="endBtn">
+      <button class="btn btn-primary" type="button">닫기</button>
+    </div>
+    </div>
 </body>
 
 </html>
