@@ -2,728 +2,382 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
 
-    * {
-      font-family: "Hahmlet", serif;
-    }
+        * {
+            font-family: "IBM Plex Sans KR", sans-serif;
+        }
 
-    .mytitle {
-      background-color: aquamarine;
-      width: auto;
-      height: 200px;
-      color: white;
-      padding: 50px;
-      text-align: center;
-    }
-    .mybtn {
-    margin: 10px;
-    text-align: center;
-    }
-    .rule {
-      background-color: aquamarine;
-      width: 600px;
-      height: 300px;
-      border: 1px solid blue;
-      border-radius: 5px;
-      padding: 50px 0;
-    }
-  </style>
+        .mytitle {
+            background-color: aquamarine;
+            width: auto;
+            height: 250px;
+            color: black;
+            padding: 50px;
+            text-align: left;
+        }
 
-  <title>3 team introduction</title>
+        .mybtn {
+            margin: 10px;
+            text-align: right;
+        }
+
+        .rule {
+            background-color: aquamarine;
+            width: 600px;
+            height: 300px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 50px 0;
+            margin: 10px auto 10px auto
+        }
+
+        .goals {
+            background-color: aquamarine;
+            width: 600px;
+            height: 200px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 50px 0;
+            margin: 20px auto 50px auto
+        }
+    </style>
+
+    <title>3 team introduction</title>
 </head>
 
 <body>
-  <header class = "mytitle">
-    <h5>스파르타코딩클럽 Node.js 5기 3조</h5>
-    <h1>중꺾마</h1>
-  </header>
-  <div id="bntCommends" class = "mybtn">
-    <button type="button" class="btn btn-outline-success">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-square-quote" viewBox="0 0 16 16">
-        <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-        <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"/>
-      </svg>
-      방명록
-    </button>
-    <button type="button" class="btn btn-outline-danger">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
-        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
-        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
-        <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-      </svg>
-      규칙
-    </button>
-    <button type="button" class="btn btn-outline-warning">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a22 22 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354zm2.893-4.894A20.4 20.4 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708z"/>
-      </svg>
-      목표
-    </button>
-  </div>
-
-  <div>
-    <div id="commends">
-      <input placeholder="성함" />
-      <input placeholder="응원의 한 마디를 남겨주세요!" />
-      <p><button>등록하기</button></p>
+    <header class="mytitle">
+        <h5>스파르타코딩클럽 Node.js 5기 3조</h5>
+        <h1>중꺾마</h1>
+        <p>중요한 것은 꺾이지 않는 마음의 약자.<br>
+            잇따른 좌절이 생겨도 포기하지 않겠다는 의지를 다질 때 쓰이는 말로,<br>
+            개발이 어렵고 생소해 때론 의지가 꺾이더라도 굴하지 않겠다는 3조의 의지를 담은 팀명입니다.
+        </p>
+    </header>
+    <div id="bntCommends" class="mybtn">
+        <button type="button" class="btn btn-outline-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chat-square-quote" viewBox="0 0 16 16">
+                <path
+                    d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                <path
+                    d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z" />
+            </svg>
+            방명록
+        </button>
+        <button type="button" class="btn btn-outline-danger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-clipboard2-check" viewBox="0 0 16 16">
+                <path
+                    d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z" />
+                <path
+                    d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z" />
+                <path
+                    d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
+            </svg>
+            규칙
+        </button>
+        <button type="button" class="btn btn-outline-warning">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a22 22 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354zm2.893-4.894A20.4 20.4 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708z" />
+            </svg>
+            목표
+        </button>
     </div>
+
+
+    <div id="commends" class="guest">
+        <section>
+            <h5>응원의 한 마디를 남겨주세요</h5>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field half">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                    </div>
+                    <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="E-mail" />
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send" class="primary" /></li>
+                </ul>
+            </form>
+        </section>
+    </div>
+
+
     <!-- 방명록 리스트 -->
     <div>
-      <ul>
-        <li>
-          <span></span>
-          <!-- 수정버튼 -->
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-highlighter"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z" />
-            </svg>
-          </button>
-          <!-- 삭제버튼 -->
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
-              viewBox="0 0 16 16">
-              <path
-                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
-              <path
-                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
-            </svg>
-          </button>
-        </li>
-      </ul>
+        <ul>
+            <li>
+                <span></span>
+                <!-- 수정버튼 -->
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-highlighter" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z" />
+                    </svg>
+                </button>
+                <!-- 삭제버튼 -->
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                        <path
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+                    </svg>
+                </button>
+            </li>
+        </ul>
     </div>
-  </div>
-  <!-- 규칙 내용 -->
-  <div class = "rule" id="ruleContent">
-    <p>@규칙</p>
-    <p>- 카메라는 항상 켜놓되, 마이크는 발언 시에만 키기</p>
-    <p>
-      - 10분 이상 자리를 비워야 하는 일이 생기면 미리 얘기하거나 슬랙에 공유 (화장실 제외)
-    </p>
-    - 모르거나 궁금한 부분이 생기면 부끄러워 하지 말고 적극적으로 질문하기!
-    <p>
-      - 막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!</p>
-    <p>
-      - 도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에 공유하기!
-    </p>
-  </div>
-  <!-- 목표 내용 -->
-  <div>
-    <p>발전을 위해 끊임없이 노력하고</p>
-    <p>적극적으로 소통하며</p>
-    <p>팀원을 존중 할 줄 아는</p>
-    <p>소통형 개발자되기</p>
-  </div>
-  <!-- 팀원 -->
-  <div>
-    <button>팀원소개</button>
-    <div>
-      <h2>중꺾마</h2>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">양현언</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="https://github.com/HyuneonY">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="https://hyuneon.tistory.com/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">김동헌</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="https://github.com/znfnfns0365">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="https://dh-0e.tistory.com/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/김진서.jpeg" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">김진서</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="https://github.com/GinGer-JSK">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="https://blog.naver.com/kalum241">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/김현지.png" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">김현지</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="https://github.com/nicehjkim">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="https://awalker.tistory.com/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/모전하.png" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">모전하</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="https://github.com/mmomomoo">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="https://momomooo.tistory.com/">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-        <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-              role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <img src="img/중꺾마.png" />
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-            </svg>
-            <div class="card-body">
-              <p class="name">중꺾마</p>
-              <div>
-                <!-- 깃 아이콘 -->
-                <a href="깃 주소 넣어주세요">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-git"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
-                  </svg>
-                </a>
-                <!-- 블로그 아이콘 -->
-                <a href="블로그 주소를 넣어주세요">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-bootstrap" viewBox="0 0 16 16">
-                    <path
-                      d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                    <path
-                      d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </button>
-      </div>
     </div>
-<<<<<<< HEAD
-  </div>
-</body>
-
-</html>
-=======
     <!-- 규칙 내용 -->
-    <div id="ruleContent">
-      <p>@규칙</p>
-      <p>- 카메라는 항상 켜놓되, 마이크는 발언 시에만 키기</p>
-      <p>
-        - 10분 이상 자리를 비워야 하는 일이 생기면 미리 얘기하거나 슬랙에 공유
-        (화장실 제외)
-      </p>
-      - 모르거나 궁금한 부분이 생기면 부끄러워 하지 말고 적극적으로 질문하기!
-      <p>- 막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!</p>
-      <p>
-        - 도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에
-        공유하기!
-      </p>
+    <div class="rule" id="ruleContent">
+        <h3>규칙</h3>
+        <p>
+            - 카메라는 항상 켜놓되, 마이크는 발언 시에만 키기
+        </p>
+        <p> - 10분 이상 자리를 비워야 하는 일이 생기면 미리 얘기하거나 슬랙에 공유 (화장실 제외)
+        </p>
+        <p> - 모르거나 궁금한 부분이 생기면 부끄러워 하지 말고 적극적으로 질문하기!
+        </p>
+        <p> - 막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!
+        </p>
+        <p>- 도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에 공유하기!
+        </p>
     </div>
     <!-- 목표 내용 -->
-    <div>
-      <p>발전을 위해 끊임없이 노력하고</p>
-      <p>적극적으로 소통하며</p>
-      <p>팀원을 존중 할 줄 아는</p>
-      <p>소통형 개발자되기</p>
+    <div class="goals">
+        <h3>"발전을 위해 끊임없이 노력하고 적극적으로 소통하며<br>
+            팀원을 존중할 줄 아는 소통형 개발자로 성장하자!"</h3>
     </div>
     <!-- 팀원 -->
     <div>
-      <button>팀원소개</button>
-      <div>
-        <h2>중꺾마</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/양현언.jpg" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">양현언</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="https://github.com/HyuneonY">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="https://hyuneon.tistory.com/">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
+        <h2>중꺾마 팀원을 소개합니다!</h2>
+        <div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/양현언.jpg" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">양현언</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="https://github.com/HyuneonY">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="https://hyuneon.tistory.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/김동헌.png" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">김동헌</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="https://github.com/znfnfns0365">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="https://dh-0e.tistory.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/김진서.jpeg" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">김진서</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="https://github.com/GinGer-JSK">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="https://blog.naver.com/kalum241">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/김현지.png" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">김현지</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="https://github.com/nicehjkim">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="https://awalker.tistory.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/모전하.png" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">모전하</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="https://github.com/mmomomoo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="https://momomooo.tistory.com/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                            preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <img src="img/중꺾마.png" />
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                        </svg>
+                        <div class="card-body">
+                            <p class="name">중꺾마</p>
+                            <div>
+                                <!-- 깃 아이콘 -->
+                                <a href="깃 주소 넣어주세요">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-git" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
+                                    </svg>
+                                </a>
+                                <!-- 블로그 아이콘 -->
+                                <a href="블로그 주소를 넣어주세요">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                                        <path
+                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </button>
             </div>
-          </button>
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/김동헌.png" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">김동헌</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="https://github.com/znfnfns0365">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="https://dh-0e.tistory.com/">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </button>
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/김진서.jpeg" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">김진서</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="https://github.com/GinGer-JSK">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="https://blog.naver.com/kalum241">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </button>
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/김현지.png" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">김현지</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="https://github.com/nicehjkim">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="https://awalker.tistory.com/">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </button>
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/모전하.png" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">모전하</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="https://github.com/mmomomoo">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="https://momomooo.tistory.com/">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </button>
-          <button
-            class="col"
-            type="button"
-            onclick="location.href='개인페이지 html 넣어주세요' "
-          >
-            <div class="card shadow-sm">
-              <svg
-                class="bd-placeholder-img card-img-top"
-                width="100%"
-                height="225"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <title>Placeholder</title>
-                <img src="img/중꺾마.png" />
-                <rect width="100%" height="100%" fill="#55595c"></rect>
-              </svg>
-              <div class="card-body">
-                <p class="name">중꺾마</p>
-                <div>
-                  <!-- 깃 아이콘 -->
-                  <a href="깃 주소 넣어주세요">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-git"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"
-                      />
-                    </svg>
-                  </a>
-                  <!-- 블로그 아이콘 -->
-                  <a href="블로그 주소를 넣어주세요">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-bootstrap"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z"
-                      />
-                      <path
-                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </button>
         </div>
-      </div>
     </div>
-  </body>
+    </div>
+
+</body>
+
 </html>
->>>>>>> 951b98ba0a95e54f001427d0d1aee53fc399985e
