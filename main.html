@@ -26,18 +26,28 @@
         }
 
         .mybtn {
-            margin: 10px;
+            margin: 50px auto 10px auto;
             text-align: center;
         }
 
         .rulesList {
             display: none;
             /* 처음에는 숨겨진 상태로 설정합니다. */
-            margin: 10px auto 10px auto;
+            background-color: aquamarine;
+            width: 600px;
+            height: 300px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 50px 0;
+            margin: 20px 10px 20px 10px;
+            text-align: center;
         }
 
         .rulesListVisible {
             display: block;
+            display: block;margin-left: 
+            auto;margin-right: auto;
+            width: 40%;
         }
 
         .goals {
@@ -49,16 +59,30 @@
             border: 1px solid blue;
             border-radius: 5px;
             padding: 50px 0;
-            margin: 20px auto 50px auto;
+            margin: 20px 10px 20px 10px;
+            text-align: center;
         }
 
         .goalsVisible {
             display: block;
+            display: block;margin-left: 
+            auto;margin-right: auto;
+            width: 40%;
         }
 
         .introduction {
-            margin: 50px 30px 100px 30px ;
+            background-color: aquamarine;
+            margin: 80px 0px 100px 0px;
+            text-align: center;
         }
+
+        .introtitle {
+            background-color: aqua;
+            font-size: 24px;
+            margin: 30px 0px 30px 0px;
+        }
+        
+
     </style>
 </head>
 
@@ -114,34 +138,44 @@
         <p>막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!</p>
         <p>도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에 공유하기!</p>
     </div>
-    <script>
-        // JavaScript 코드
-        const showRulesBtn = document.getElementById('showRulesBtn');
-        const rulesList = document.getElementById('rulesList');
-
-        showRulesBtn.addEventListener('click', function () {
-            rulesList.classList.toggle('rulesListVisible');
-        });
-    </script>
 
     <!-- 목표 내용 -->
     <div id="goals" class="goals">
         <h3>"발전을 위해 끊임없이 노력하고 적극적으로 소통하며<br>
             팀원을 존중할 줄 아는 소통형 개발자로 성장하자!"</h3>
     </div>
+
     <script>
         // JavaScript 코드
+        const showRulesBtn = document.getElementById('showRulesBtn');
         const showgoalsBtn = document.getElementById('showgoalsBtn');
+        const rulesList = document.getElementById('rulesList');
         const goals = document.getElementById('goals');
 
+        showRulesBtn.addEventListener('click', function () {
+            goals.classList.remove('goalsVisible');
+            rulesList.classList.toggle('rulesListVisible');
+        });
+
         showgoalsBtn.addEventListener('click', function () {
+            rulesList.classList.remove('rulesListVisible');
             goals.classList.toggle('goalsVisible');
         });
 
+        // 문서의 다른 부분을 클릭했을 때 이전에 선택한 요소를 숨기는 이벤트 핸들러
+        document.addEventListener('click', function (event) {
+            // 클릭된 요소가 버튼이 아니면서 이전에 선택한 요소의 토글 클래스를 가지고 있다면 숨깁니다.
+            if (!event.target.matches('#showRulesBtn') && !event.target.matches('#showgoalsBtn') &&
+                !rulesList.contains(event.target) && !goals.contains(event.target)) {
+                rulesList.classList.remove('rulesListVisible');
+                goals.classList.remove('goalsVisible');
+            }
+        });
     </script>
-    <!-- 팀원 -->
+
+    <!-- 팀원 소개 -->
     <div class="introduction">
-        <h2>중꺾마 팀원을 소개합니다!</h2>
+        <h2 class="introtitle">중꺾마 팀원을 소개합니다!</h2>
         <div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_HEYANG.html' ">
