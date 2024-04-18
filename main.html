@@ -16,15 +16,29 @@
         }
 
         .mytitle {
-            background-image: url("img/team.png");
-            background-position: right;
-            background-size: 50%;
             width: auto;
             height: 250px;
-            color: black;
             padding: 50px;
             margin: 100px auto 10px auto;
+            position: relative;
+        }
+
+        .mytitle::before {
+            content: "";
+            background: url("img/team.png");
+            background-position: right;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+        .mytitle > header {
+            color: black;
             text-align: center;
+            position: relative;
         }
 
         .mybtn {
@@ -35,30 +49,30 @@
         .rulesList {
             display: none;
             /* 처음에는 숨겨진 상태로 설정합니다. */
-            background-color: aquamarine;
             width: 600px;
             height: 300px;
-            border: 1px solid blue;
+            border: 1px solid red;
             border-radius: 5px;
             padding: 50px 0;
             margin: 20px 10px 20px 10px;
             text-align: center;
         }
-        
+
         .rulesListVisible {
             display: block;
-            display: block;margin-left: 
-            auto;margin-right: auto;
+            display: block;
+            margin-left:
+                auto;
+            margin-right: auto;
             width: 40%;
         }
 
         .goals {
             display: none;
             /* 처음에는 숨겨진 상태로 설정합니다. */
-            background-color: aquamarine;
             width: 600px;
             height: 200px;
-            border: 1px solid blue;
+            border: 1px solid orange;
             border-radius: 5px;
             padding: 50px 0;
             margin: 20px 10px 20px 10px;
@@ -67,8 +81,10 @@
 
         .goalsVisible {
             display: block;
-            display: block;margin-left: 
-            auto;margin-right: auto;
+            display: block;
+            margin-left:
+                auto;
+            margin-right: auto;
             width: 40%;
         }
 
@@ -81,20 +97,20 @@
             font-size: 26px;
             padding: 20px 0;
         }
-        
-
     </style>
 </head>
 
 <body>
-    <header class="mytitle">
-        <h5>스파르타코딩클럽 Node.js 5기 3조</h5>
-        <h1>중꺾마</h1>
-        <p>중요한 것은 꺾이지 않는 마음의 약자.<br>
-            잇따른 좌절이 생겨도 포기하지 않겠다는 의지를 다질 때 쓰이는 말로,<br>
-            개발이 어려워 때론 의지가 꺾이더라도 굴하지 않겠다는 3조의 의지를 담은 팀명입니다.
-        </p>
-    </header>
+    <div class="mytitle">
+        <header>
+            <h5>스파르타코딩클럽 Node.js 5기 3조</h5>
+            <h1>중꺾마</h1>
+            <p>중요한 것은 꺾이지 않는 마음의 약자.<br>
+                잇따른 좌절이 생겨도 포기하지 않겠다는 의지를 다질 때 쓰이는 말로,<br>
+                개발이 어려워 때론 의지가 꺾이더라도 굴하지 않겠다는 3조의 의지를 담은 팀명입니다.
+            </p>
+        </header>
+    </div>
 
     <div id="bntCommends" class="mybtn">
         <button class="btn btn-outline-success" type="button" onclick="location.href='guestbook.html' ">
