@@ -21,6 +21,7 @@
       margin: 30px 30px 30px 30px;
       width: 80%;
       height: 200px;
+      border-radius: 20px;
       color: white;
       display: flex;
       flex-direction: column;
@@ -121,6 +122,8 @@
       for (let i = 0; i <= 2; i++) {
         doingList.push($('#' + i).val());
       }
+      let today=new Date();
+      doingList.push(today.toLocaleString());
       let docIn = {
         doingList,
       };
@@ -151,12 +154,15 @@
       let find = tete['cards'][i];
       let row = await getDoc(doc(db, 'to_do', find));
       row = row.data();
-      let date = row['doingList'][0];
+      let name = row['doingList'][0];
       let temp_html = `
             <div class=${find}>
               <div class="card h-100">
                 <div class="card-footer">
-                  <small class="text-body-secondary">${date}</small>
+                  <h5 class="text-body-secondary">${name}</h5>
+                    <div class="time">
+                        <small">${row['doingList'][3]}</small>
+                    </div>
                   <small class="dbtn">
                     <button class="deletebtn" id=${find} type="button" class="btn btn-secondary">X</button>
                     </small>
@@ -233,7 +239,7 @@
   </div>
   </div>
   <div class="endBtn">
-    <button class="btn btn-secondary" type="button" onclick="location.href='main.html' ">닫기</button>
+    <button class="btn btn-secondary" type="button" onclick="location.href='../main.html' ">닫기</button>
   </div>
   </div>
 </body>
