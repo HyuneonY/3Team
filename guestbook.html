@@ -119,32 +119,44 @@
     // 카드 등록
     $('#postingbtn').click(async function () {
       let doingList = [];
+      let nullTest = 3;
       for (let i = 0; i <= 2; i++) {
+        if ($('#' + i).val() == "") {
+          nullTest = i;
+          break;
+        }
         doingList.push($('#' + i).val());
       }
-      let today=new Date();
-      doingList.push(today.toLocaleString());
-      let docIn = {
-        doingList,
-      };
+      if (nullTest == 3) {
+        let today = new Date();
+        doingList.push(today.toLocaleString());
+        let docIn = {
+          doingList,
+        };
 
-      let last_card = await getDoc(doc(db, 'to_do_card', 'last_card'));
-      let last_number = last_card.data();
-      last_number['last']++;
+        let last_card = await getDoc(doc(db, 'to_do_card', 'last_card'));
+        let last_number = last_card.data();
+        last_number['last']++;
 
-      await setDoc(doc(db, 'to_do', 'card' + last_number['last']), docIn);
+        await setDoc(doc(db, 'to_do', 'card' + last_number['last']), docIn);
 
-      let card_In = 'card' + last_number['last'];
-      const washingtonRef = doc(db, 'to_do_card', 'card_available');
-      await updateDoc(washingtonRef, {
-        cards: arrayUnion(card_In),
-      });
-      await setDoc(doc(db, 'to_do_card', 'last_card'), {
-        last: last_number['last'],
-      });
+        let card_In = 'card' + last_number['last'];
+        const washingtonRef = doc(db, 'to_do_card', 'card_available');
+        await updateDoc(washingtonRef, {
+          cards: arrayUnion(card_In),
+        });
+        await setDoc(doc(db, 'to_do_card', 'last_card'), {
+          last: last_number['last'],
+        });
 
-      alert('저장이 완료되었습니다.');
-      window.location.reload();
+        alert('저장이 완료되었습니다.');
+        window.location.reload();
+      }
+      else {
+        if (nullTest == 0) alert("이름을 입력해주세요!");
+        else if (nullTest == 2) alert("비밀번호를 입력해주세요!");
+        else if (nullTest == 1) alert("내용을 입력해주세요!");
+      }
     });
 
     //등록되어 있는 카드 띄우기
@@ -164,6 +176,7 @@
                         <small">${row['doingList'][3]}</small>
                     </div>
                   <small class="dbtn">
+                    <button class="editbtn" id=${find} type="button" class="btn btn-secondary">수정</button>
                     <button class="deletebtn" id=${find} type="button" class="btn btn-secondary">X</button>
                     </small>
               </div>
@@ -198,6 +211,34 @@
       }
       else {
         alert("비밀번호가 일치하지 않습니다.");
+      }
+    });
+
+    //카드 수정
+    $('.editbtn').click(async function (e) {
+      let pwIn;
+      let pw = await getDoc(doc(db, 'to_do', e.target.id));
+      pw = pw.data();
+      while (1) {
+        pwIn = prompt('비밀번호를 입력하세요', '');
+        if (pwIn == pw['doingList'][2]) {
+          let editContent;
+          while(1){
+            editContent = prompt('수정하실 내용을 입력하세요');
+            if(editContent!="")break;
+            alert('내용을 입력해주세요!');
+          }
+          let row = await getDoc(doc(db, 'to_do', e.target.id));
+          row = row.data();
+          row['doingList'][1]=editContent;
+          await setDoc(doc(db, "to_do", e.target.id), row);
+          alert('수정이 완료되었습니다');
+          window.location.reload();
+          break;
+        }
+        else {
+          alert("비밀번호가 일치하지 않습니다.");
+        }
       }
     });
   </script>
