@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 team introduction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap');
 
@@ -19,25 +21,28 @@
             height: 250px;
             color: black;
             padding: 50px;
-            text-align: left;
+            margin: 100px auto 10px auto;
+            text-align: center;
         }
 
         .mybtn {
             margin: 10px;
-            text-align: right;
+            text-align: center;
         }
 
-        .rule {
-            background-color: aquamarine;
-            width: 600px;
-            height: 300px;
-            border: 1px solid blue;
-            border-radius: 5px;
-            padding: 50px 0;
-            margin: 10px auto 10px auto
+        .rulesList {
+            display: none;
+            /* 처음에는 숨겨진 상태로 설정합니다. */
+            margin: 10px auto 10px auto;
+        }
+
+        .rulesListVisible {
+            display: block;
         }
 
         .goals {
+            display: none;
+            /* 처음에는 숨겨진 상태로 설정합니다. */
             background-color: aquamarine;
             width: 600px;
             height: 200px;
@@ -46,9 +51,11 @@
             padding: 50px 0;
             margin: 20px auto 50px auto
         }
-    </style>
 
-    <title>3 team introduction</title>
+        .goalsVisible {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -57,10 +64,12 @@
         <h1>중꺾마</h1>
         <p>중요한 것은 꺾이지 않는 마음의 약자.<br>
             잇따른 좌절이 생겨도 포기하지 않겠다는 의지를 다질 때 쓰이는 말로,<br>
-            개발이 어렵고 생소해 때론 의지가 꺾이더라도 굴하지 않겠다는 3조의 의지를 담은 팀명입니다.
+            개발이 어려워 때론 의지가 꺾이더라도 굴하지 않겠다는 3조의 의지를 담은 팀명입니다.
         </p>
     </header>
+
     <div id="bntCommends" class="mybtn">
+
         <button type="button" class="btn btn-outline-success">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-chat-square-quote" viewBox="0 0 16 16">
@@ -71,7 +80,8 @@
             </svg>
             방명록
         </button>
-        <button type="button" class="btn btn-outline-danger">
+
+        <button type="button" class="btn btn-outline-danger" id="showRulesBtn">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-clipboard2-check" viewBox="0 0 16 16">
                 <path
@@ -83,7 +93,8 @@
             </svg>
             규칙
         </button>
-        <button type="button" class="btn btn-outline-warning">
+
+        <button type="button" class="btn btn-outline-warning" id='showgoalsBtn'>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -93,6 +104,37 @@
         </button>
     </div>
 
+    <div id="rulesList" class="rulesList">
+        <p></p>카메라는 항상 켜놓되, 마이크는 발언 시에만 키기</p>
+        <p>10분 이상 자리를 비워야 하는 일이 생기면 미리 얘기하거나 슬랙에 공유 (화장실 제외)</p>
+        <p>모르거나 궁금한 부분이 생기면 부끄러워 하지 말고 적극적으로 질문하기!</p>
+        <p>막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!</p>
+        <p>도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에 공유하기!</p>
+    </div>
+    <script>
+        // JavaScript 코드
+        const showRulesBtn = document.getElementById('showRulesBtn');
+        const rulesList = document.getElementById('rulesList');
+
+        showRulesBtn.addEventListener('click', function () {
+            rulesList.classList.toggle('rulesListVisible');
+        });
+    </script>
+
+    <!-- 목표 내용 -->
+    <div id="goals" class="goals">
+        <h3>"발전을 위해 끊임없이 노력하고 적극적으로 소통하며<br>
+            팀원을 존중할 줄 아는 소통형 개발자로 성장하자!"</h3>
+    </div>
+    <script>
+        // JavaScript 코드
+        const showgoalsBtn = document.getElementById('showgoalsBtn');
+        const goals = document.getElementById('goals');
+
+        showgoalsBtn.addEventListener('click', function () {
+            goalsList.classList.toggle('goalsVisible');
+        });
+    </script>
 
     <div id="commends" class="guest">
         <section>
@@ -109,61 +151,32 @@
                         <textarea name="message" id="message" placeholder="Message"></textarea>
                     </div>
                 </div>
-                <ul class="actions">
-                    <li><input type="submit" value="Send" class="primary" /></li>
-                </ul>
+                <div class="actions">
+                    <input type="submit" value="Send" class="primary" />
+                </div>
             </form>
         </section>
+
+         <!-- 수정버튼 -->
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-highlighter" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z" />
+            </svg>
+        </button>
+         <!-- 삭제버튼 -->
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-trash" viewBox="0 0 16 16">
+                <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                <path
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+            </svg>
+        </button>
     </div>
 
-
-    <!-- 방명록 리스트 -->
-    <div>
-        <ul>
-            <li>
-                <span></span>
-                <!-- 수정버튼 -->
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-highlighter" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z" />
-                    </svg>
-                </button>
-                <!-- 삭제버튼 -->
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-trash" viewBox="0 0 16 16">
-                        <path
-                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
-                        <path
-                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
-                    </svg>
-                </button>
-            </li>
-        </ul>
-    </div>
-    </div>
-    <!-- 규칙 내용 -->
-    <div class="rule" id="ruleContent">
-        <h3>규칙</h3>
-        <p>
-            - 카메라는 항상 켜놓되, 마이크는 발언 시에만 키기
-        </p>
-        <p> - 10분 이상 자리를 비워야 하는 일이 생기면 미리 얘기하거나 슬랙에 공유 (화장실 제외)
-        </p>
-        <p> - 모르거나 궁금한 부분이 생기면 부끄러워 하지 말고 적극적으로 질문하기!
-        </p>
-        <p> - 막힐 때는 망설이지 말고 바로 팀원/튜터님께 질문하기!
-        </p>
-        <p>- 도움이 되는 정보나 팁, 아이디어가 있으면 서로 묻지 않아도 슬랙에 공유하기!
-        </p>
-    </div>
-    <!-- 목표 내용 -->
-    <div class="goals">
-        <h3>"발전을 위해 끊임없이 노력하고 적극적으로 소통하며<br>
-            팀원을 존중할 줄 아는 소통형 개발자로 성장하자!"</h3>
-    </div>
     <!-- 팀원 -->
     <div>
         <h2>중꺾마 팀원을 소개합니다!</h2>
@@ -375,7 +388,6 @@
                 </button>
             </div>
         </div>
-    </div>
     </div>
 
 </body>
