@@ -20,16 +20,25 @@
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
         * {
-            font-family: 'Gowun Dodum', sans-serif;
+            color: black;
+            font-family: "IBM Plex Sans KR", sans-serif;
+            font-weight: 300;
+            line-height: 1.2;
         }
 
         .aboutMeTitle {
             color: black;
-            height: 300px;
+            height: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            height: 10vh;
+            width: 100vw;
+            background-image: url('../img/guestbookpic.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
         }
 
         .aboutMeDetail {
@@ -49,12 +58,28 @@
         .hyperLink {
             height: 35px;
         }
+
+        h1 {
+            font-size: 72px;
+        }
+
+        .card-text1 {
+            background-color: rgb(214, 214, 214);
+        }
+
+        .card {
+            font-size: 18px;
+        }
+        strong {
+            font-size: 20px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div class="aboutMeTitle">
-        <h1>3조 김 진 서(진저공방)</h1>
+        <h1>3조 김진서(진저공방)</h1>
     </div>
 
     <div class="aboutMeDetail">
@@ -65,16 +90,16 @@
                     <img src="aboutMe_JSKIM.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h2 class="aboutMeDetailTitle">지금부터 이 사람에 대해 알아보자!</h2>
-                        <p class="card-text"><strong>한줄 자기소개</strong> 개발이 뭔가요? 맛있는건가요?</p>
+                        <p class="card-text1"><strong>한줄 자기소개</strong> 개발이 뭔가요? 맛있는건가요?</p>
                         <p class="card-text"><strong>희망 직군</strong> 네카라쿠배당토직야몰두센 을 원하지만 현실은 ㅠ ㅠ</p>
-                        <p class="card-text"><strong>MBIT</strong> <b class="mbti">ISTJ</b> 믿지마세요;; 대충 했어요~ 그날그날 기분에 따라
+                        <p class="card-text1"><strong>MBIT</strong> <b class="mbti">ISTJ</b> 믿지마세요;; 대충 했어요~ 그날그날 기분에 따라
                             바껴요 ~</p>
                         <p class="card-text"><strong>나의 장점</strong> 조용하면서 말이 많다(?)</p>
-                        <p class="card-text"><strong>나의 협업 스타일</strong> 나서지 않고 따라가는 편</p>
+                        <p class="card-text1"><strong>나의 협업 스타일</strong> 나서지 않고 따라가는 편</p>
                         <p class="card-text"><strong>취미</strong> 드라이브, 드론비행, 음악감상, 해외여행, 새벽산책, 전자제품 수리</p>
-                        <p class="card-text"><strong>좋아하는 것</strong> 재밌는 것 ! 도파민 터지는 것 ! ! 당근마켓 ! ! !</p>
+                        <p class="card-text1"><strong>좋아하는 것</strong> 재밌는 것 ! 도파민 터지는 것 ! ! 당근마켓 ! ! !</p>
                         <p class="card-text"><strong>싫어하는 것</strong> 졸음이 몰려오는 느낌, 귀찮은 것, 피곤한 것, 재미 없는 것</p>
-                        <p class="card-text"><strong>좋아하는 음악</strong> Bakermat | Do Your Thing (feat. Randa Khamis)
+                        <p class="card-text1"><strong>좋아하는 음악</strong> Bakermat | Do Your Thing (feat. Randa Khamis)
                             <a href="https://youtu.be/9OVLMz9R_wY?si=7c7o9HhIcP8NPZeF" target="_blank">
                                 <button type="button" class="btn btn-outline-danger">들으러 가기</button>
                             </p></a>
@@ -95,7 +120,7 @@
                         </div>
                         <a href="javascript:top.window.close()">
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary" type="button">닫기</button>
+                                <button class="btn btn-secondary" type="button">닫기</button>
                             </div>
                         </a>
                     </div>
