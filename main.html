@@ -42,10 +42,14 @@
             border-radius: 5px;
             padding: 50px 0;
             margin: 20px 10px 20px 10px;
+            text-align: center;
         }
-
+        
         .rulesListVisible {
             display: block;
+            display: block;margin-left: 
+            auto;margin-right: auto;
+            width: 40%;
         }
 
         .goals {
@@ -58,10 +62,14 @@
             border-radius: 5px;
             padding: 50px 0;
             margin: 20px 10px 20px 10px;
+            text-align: center;
         }
 
         .goalsVisible {
             display: block;
+            display: block;margin-left: 
+            auto;margin-right: auto;
+            width: 40%;
         }
 
         .introduction {
@@ -73,6 +81,8 @@
             font-size: 26px;
             padding: 20px 0;
         }
+        
+
     </style>
 </head>
 
@@ -87,7 +97,7 @@
     </header>
 
     <div id="bntCommends" class="mybtn">
-        <button type="button" class="btn btn-outline-success">
+        <button class="btn btn-outline-success" type="button" onclick="location.href='guestbook.html' ">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 class="bi bi-chat-square-quote" viewBox="0 0 16 16">
                 <path
@@ -161,20 +171,20 @@
                 goals.classList.remove('goalsVisible');
             }
         });
-    </script>>
+    </script>
 
     <!-- 팀원 소개 -->
     <div class="introduction">
         <h2 class="introtitle">중꺾마 팀원을 소개합니다!</h2>
         <div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_HEYANG.html' ">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/양현언.jpg" />
+                            <img src="img/YHE.jpg" />
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
@@ -202,13 +212,13 @@
                         </div>
                     </div>
                 </button>
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_DHKIM.html' ">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/김동헌.png" />
+                            <img src="img/KDH.png">
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
@@ -236,13 +246,13 @@
                         </div>
                     </div>
                 </button>
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_JSKIM.html' ">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/김진서.jpeg" />
+                            <img src="img/KJS.jpeg" />
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
@@ -270,13 +280,13 @@
                         </div>
                     </div>
                 </button>
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_HJKIM.html' ">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/김현지.png" />
+                            <img src="img/KHJ.png" />
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
@@ -304,13 +314,13 @@
                         </div>
                     </div>
                 </button>
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button" onclick="location.href='AboutMe_2/aboutMe_JHMO.html' ">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/모전하.png" />
+                            <img src="img/MJH.png" />
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
@@ -338,36 +348,25 @@
                         </div>
                     </div>
                 </button>
-                <button class="col" type="button" onclick="location.href='개인페이지 html 넣어주세요' ">
+                <button class="col" type="button">
                     <div class="card shadow-sm">
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                             preserveAspectRatio="xMidYMid slice" focusable="false">
                             <title>Placeholder</title>
-                            <img src="img/중꺾마.png" />
+                            <img src="img/JKM.png" />
                             <rect width="100%" height="100%" fill="#55595c"></rect>
                         </svg>
                         <div class="card-body">
                             <p class="name">중꺾마</p>
                             <div>
                                 <!-- 깃 아이콘 -->
-                                <a href="깃 주소 넣어주세요">
+                                <a href="https://github.com/HyuneonY/3Team.git">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-git" viewBox="0 0 16 16">
                                         <path
                                             d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457" />
                                     </svg>
-                                </a>
-                                <!-- 블로그 아이콘 -->
-                                <a href="블로그 주소를 넣어주세요">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-bootstrap" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
-                                        <path
-                                            d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
