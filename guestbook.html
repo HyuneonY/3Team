@@ -225,7 +225,7 @@
           let editContent;
           while (1) {
             editContent = prompt('수정하실 내용을 입력하세요');
-            if (editContent != null) break;
+            if (editContent != null || editContent) break;
             alert('내용을 입력해주세요!');
           }
           if(editContent == null) break;
