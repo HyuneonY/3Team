@@ -209,7 +209,7 @@
           await setDoc(doc(db, 'to_do_card', 'last_card'), { last: 0 });
         }
       }
-      else {
+      else if(pwIn!=null){
         alert("비밀번호가 일치하지 않습니다.");
       }
     });
@@ -242,6 +242,7 @@
           window.location.reload();
           break;
         }
+        else if(pwIn==null)break;
         else {
           alert("비밀번호가 일치하지 않습니다.");
           break;
